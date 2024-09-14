@@ -3,17 +3,6 @@
     padding: 0;
 }
 
-/* Скрываем scrollbar для Chrome, Safari и Opera */
-.example::-webkit-scrollbar {
-    display: none;
-}
-
-/* Скрываем scrollbar для IE, Edge и Firefox */
-.example {
-    -ms-overflow-style: none; /* IE и Edge */
-    scrollbar-width: none; /* Firefox */
-}
-
 body {
     color: white;
     font-size: 18px;
@@ -21,10 +10,10 @@ body {
     background-color: black;
     background-repeat: no-repeat;
     background-size: 100%;
-    background-image: url(https://autode-static.de/wp-content/uploads/2015/01/mid-D-sseldorf-Auf-die-u-eren-Werte-kommt-esa-200769.jpg);
+    background-image: url('img/shelby_cobra_background.png');
 }
 
-.header {
+header {
     width: 100%;
     height: 15vh;
     background-color: black;
@@ -40,7 +29,8 @@ header ul li {
     line-height: 15vh;
 }
 
-.button-header{
+header ul li a {
+  text-decoration: none;
   transition: 0.2s;
   color: #e3e3e3;
 }
@@ -49,7 +39,7 @@ header ul li {
   font-size: 5.5vh;
   transition: 0.2s;
   color: white;
-  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7); 
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
 }
 
 #gradient_down {
@@ -68,13 +58,17 @@ header ul li {
 }
 
 #car_name {
-    height: 30vh;
     width: 100%;
     background-color: black;
     float: left;
     font-size: 15vh;
     text-align: center;
     line-height: 30vh;
+}
+
+#car_name p {
+  position: relative;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
 }
 
 #car_info {
@@ -93,9 +87,9 @@ header ul li {
     background-repeat: no-repeat;
     background-size: 100%;
     position: relative;
-    top:6vh;
+    top: 6vh;
     margin-bottom: 10vh;
-    background-image: url(https://www.freep.com/gcdn/presto/2021/02/17/PDTF/30448067-6110-4840-a936-cc3cc5633aad-1966_Shelby_Cobra_Super_Snake.jpeg?crop=5493,3090,x0,y279&width=3200&height=1801&format=pjpg&auto=webp);
+    background-image: url('img/shelby_cobra_1.png');
 }
 
 #creator_photo {
@@ -107,7 +101,7 @@ header ul li {
     top: 6vh;
     background-repeat: no-repeat;
     background-size: 100%;
-    background-image: url("https://motor.ru/thumb/1500x0/filters:quality(75):no_upscale()/imgs/2019/05/05/13/3253170/4f7246c182b0eb6e4f191d35fe8c6c8d8547b543.jpg");
+    background-image: url('img/shelby_cobra_2.png');
 }
 
 #car_info2 {
@@ -129,7 +123,7 @@ header ul li {
     position: relative;
     bottom: 15vh;
     background-size: 100%;
-    background-image: linear-gradient(to bottom, black 10%, transparent 50%), url("https://www.classicdriver.com/sites/default/files/article_images/1964-ac-cobra.jpg");
+    background-image: linear-gradient(to bottom, black 10%, transparent 50%), url('img/shelby_cobra_3.png');
     z-index: 1;
 }
 
@@ -142,5 +136,5 @@ header ul li {
   position: relative;
   top:10vh;
   margin-bottom: 10vh;
-  background-image: url("https://motor.ru/imgs/2022/04/26/15/5379982/9a287829c9d10586fa6fd715b7fc032ac39defb6.jpeg");
+  background-image: url('img/shelby_cobra_4.png');
 }
