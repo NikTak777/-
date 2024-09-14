@@ -8,15 +8,11 @@ body {
     font-size: 18px;
     font-family: Gill Sans, sans-serif;
     background-color: black;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-image: url('img/shelby_cobra_background.png');
 }
 
 header {
     width: 100%;
     height: 15vh;
-    background-color: black;
 }
 
 header ul li {
@@ -42,19 +38,37 @@ header ul li a {
   text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
 }
 
-#gradient_down {
-    height: 20vh;
+.img_container {
+    position: relative;
+    width: 100%; /* Занимает 100% ширины экрана */
+    height: 100vh; /* Установите желаемую высоту изображения */
+    overflow: hidden;
+}
+
+.img_container img {
     width: 100%;
-    float: left;
+    height: 100%;
+    object-fit: cover; /* Изображение заполняет контейнер */
+}
+
+.img_container::before,
+.img_container::after {
+    content: '';
+    position: absolute;
+    height: 20vh; /* Высота градиентов */
+    width: 100%;
+    pointer-events: none; /* Позволяет кликать по изображению под градиентом */
+}
+
+.img_container::before {
+    top: 0;
     background: linear-gradient(to bottom, black, transparent);
 }
 
-#gradient_up {
-    height: 20vh;
-    width: 100%;
-    float: left;
-    background: linear-gradient(to bottom, transparent, black);
-    margin-top: 60vh;
+.img_container::after {
+    bottom: 0; /* Без bottom и left градиент пропадает*/
+    left: 0;
+    background: linear-gradient(to top, black, transparent);
 }
 
 #car_name {
@@ -63,7 +77,7 @@ header ul li a {
     float: left;
     font-size: 15vh;
     text-align: center;
-    line-height: 30vh;
+    background-color: black;
 }
 
 #car_name p {
